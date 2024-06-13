@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        #thebody{
+           text-align: center;
+           padding: 30px ;
+           background-color: darkviolet;
+           width: 400px;
+           height: 100px;
+           margin: auto;
+           
+        }
+        #cover{
+            background-color: aliceblue;
+            width: 150px;
+            height: 50px;
+            margin: auto;
+            border-radius: 5px;
+            text-align: center;
+            
+
+        }
+        #theResult{
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<body>
+   <div id="thebody">
+    <input id="input1"  type="text" placeholder="Enter month">
+    <button onclick="clickMe()">clickMe</button>
+    <div id="cover">
+        <p id="theResult"></p>
+
+    </div>
+   
+   </div> 
+</body>
+</html>
+<script>
+
+function clickMe (){
+     let input1 = document.getElementById ('input1');
+     let input1Value = input1.value;
+     input1Value = input1Value .toLowerCase();
+     let theResult = document.getElementById ('theResult');
+     
+
+
+    switch (true) {
+        case input1Value  === "january":
+            theResult.innerHTML = (`${input1Value} has 31days`);
+            break;
+            case input1Value  === "february":
+            theResult.innerHTML = (`${input1Value} has 29days`);
+            break;
+            case input1Value  === "march":
+            theResult.innerHTML = (`${input1Value} has 31days`);
+            break;
+            case input1Value  === "april":
+            theResult.innerHTML = (`${input1Value} has 30days`);
+            break;
+            case input1Value  === "may":
+            theResult.innerHTML = (`${input1Value} has 31days`);
+            break;
+            case input1Value  === "june":
+            theResult.innerHTML = (`${input1Value} has 30days`);
+            break;
+            case input1Value  === "july":
+            theResult.innerHTML = (`${input1Value} has 31days`);
+            break;
+            case input1Value  === "august":
+            theResult.innerHTML = (`${input1Value} has 31days`);
+            break;
+            case input1Value  === "september":
+            theResult.innerHTML = (`${input1Value} has 30days`);
+            break;
+            case input1Value  === "october":
+            theResult.innerHTML = (`${input1Value} has 31days`);
+            break;
+            case input1Value  === "november":
+            theResult.innerHTML = (`${input1Value} has 30days`);
+            break;
+            case input1Value  === "december":
+            theResult.innerHTML = (`${input1Value} has 31days`);
+            break;
+    
+        default:
+            theResult.innerHTML = ('invalid month')
+            break;
+    }
+}
+
+</script>
